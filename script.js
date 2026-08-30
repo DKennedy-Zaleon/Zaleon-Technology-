@@ -1,21 +1,24 @@
-const menuBtn = document.querySelector('.mobile-menu');
-const nav = document.querySelector('header nav');
-if (menuBtn && nav) {
-  menuBtn.addEventListener('click', () => {
-    const open = nav.style.display === 'flex';
-    nav.style.display = open ? 'none' : 'flex';
-    if (!open) {
-      nav.style.position = 'absolute';
-      nav.style.top = '68px';
-      nav.style.left = '13px';
-      nav.style.right = '13px';
-      nav.style.flexDirection = 'column';
-      nav.style.alignItems = 'stretch';
-      nav.style.gap = '0';
-      nav.style.padding = '12px';
-      nav.style.background = '#0b0e13';
-      nav.style.border = '1px solid #1c2430';
-      nav.style.borderRadius = '10px';
-    }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const path = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav a').forEach(a => {
+    const href = a.getAttribute('href');
+    if (href === path || (path === '' && href === 'index.html')) a.classList.add('active');
   });
-}
+
+  const form = document.querySelector('#contact-form');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const subject = encodeURIComponent(data.get('subject') || 'Website inquiry');
+      const body = encodeURIComponent(
+        `Name: ${data.get('name') || ''}\n` +
+        `Email: ${data.get('email') || ''}\n` +
+        `Company: ${data.get('company') || ''}\n\n` +
+        `${data.get('message') || ''}`
+      );
+      window.location.href = `mailto:support@zaleon.tech?subject=${subject}&body=${body}`;
+    });
+  }
+});

@@ -1,3 +1,64 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact Us | Zaleon Systems</title><meta name="description" content="Contact Zaleon Systems for IT support, managed services, cybersecurity, cloud, networking and consulting."><link rel="stylesheet" href="styles.css"></head><body>
-<header><div class="container nav"><a class="brand" href="index.html"><img src="assets/zaleon-systems-logo.png" alt="Zaleon Systems"></a><nav><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About Us</a><a class="active" href="contact.html">Contact Us</a></nav><a class="nav-cta" href="contact.html">Get in Touch</a><button class="mobile-menu" aria-label="Menu">☰</button></div></header>
-<main><section class="section"><div class="container contact-grid"><div><div class="eyebrow">Contact Us</div><h1>Let’s build something great together.</h1><p class="lead">Have a question or need support? Reach out and we’ll get back to you as soon as possible.</p><div class="contact-list"><a href="mailto:hello@zaleon.tech">✉ hello@zaleon.tech</a><div>⌖ Boston, MA</div><div>Serving businesses nationwide</div></div></div><div class="contact-box"><form class="form-grid" action="https://formspree.io/f/YOUR_FORM_ID" method="POST"><input name="name" placeholder="Full Name" required><input type="email" name="email" placeholder="Email Address" required><input name="company" placeholder="Company Name"><input name="subject" placeholder="Subject"><textarea name="message" placeholder="How can we help you?" required></textarea><button class="btn-primary" type="submit">Send Message</button></form><div class="form-note">Before launch, replace <b>YOUR_FORM_ID</b> with your Formspree form ID, or connect this form to a Cloudflare Worker/Pages Function.</div></div></div></section></main><footer><div class="container footer-row"><div class="footer-brand">Zaleon Systems</div><div>© 2026 Zaleon Systems. All rights reserved.</div><div class="social"><span>LinkedIn</span><span>GitHub</span></div></div></footer><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Zaleon Systems IT solutions and support.">
+  <title>Contact Us | Zaleon Systems</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="">
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html"><img src="assets/zaleon-systems-logo.png" alt="Zaleon Systems"></a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+    <a class="header-cta" href="contact.html">Get in Touch</a>
+  </div>
+</header>
+
+
+<main>
+<section class="container contact-layout">
+  <div class="contact-copy">
+    <p class="kicker">Contact us</p>
+    <h1>Let’s build<br>something<br>great<br>together.</h1>
+    <p class="lead">Have a question or need support? Reach out and we’ll get back to you as soon as possible.</p>
+    <div class="contact-info">
+      <div class="contact-item"><div class="contact-icon"><svg viewBox="0 0 48 48"><rect x="7" y="11" width="34" height="26" rx="3"/><path d="m8 14 16 12 16-12"/></svg></div><div><b>Email</b><a href="mailto:support@zaleon.tech">support@zaleon.tech</a></div></div>
+      <div class="contact-item"><div class="contact-icon"><svg viewBox="0 0 48 48"><path d="M15 8 10 13c-1.4 1.4-.7 5.6 1.8 10.5 3.5 7 9.8 13.2 16.7 16.7 4.9 2.5 9.1 3.2 10.5 1.8l5-5-9-7-4 4c-4.7-2.4-8.3-6-10.7-10.7l4-4Z"/></svg></div><div><b>Phone</b><a href="tel:+16178558869">617-855-8869</a></div></div>
+      <div class="contact-item"><div class="contact-icon"><svg viewBox="0 0 48 48"><path d="M24 43s13-12 13-24a13 13 0 1 0-26 0c0 12 13 24 13 24Z"/><circle cx="24" cy="19" r="4"/></svg></div><div><b>Location</b><span>Boston, MA</span></div></div>
+      <div class="contact-item"><div class="contact-icon"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><path d="M6 24h36M24 6c6 5 9 11 9 18s-3 13-9 18M24 6c-6 5-9 11-9 18s3 13 9 18"/></svg></div><div><span>Serving businesses nationwide</span></div></div>
+    </div>
+  </div>
+  <div class="contact-form-wrap">
+    <form id="contact-form" class="contact-form">
+      <input name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input name="company" placeholder="Company Name">
+      <input name="subject" placeholder="Subject" required>
+      <textarea name="message" placeholder="How can we help you?" required></textarea>
+      <button class="btn btn-primary submit" type="submit">Send Message</button>
+    </form>
+    <p class="form-note">The Send Message button opens the visitor’s email app with the form details pre-filled to support@zaleon.tech. A server-side form handler can be added later if you want messages to submit without opening email.</p>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a class="footer-brand" href="index.html"><img src="assets/zaleon-systems-logo.png" alt="Zaleon Systems"></a>
+    <div class="footer-copy">© 2026 Zaleon Systems. All rights reserved.</div>
+    <div class="social"><span>LinkedIn</span><span>GitHub</span></div>
+  </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
