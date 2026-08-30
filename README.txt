@@ -1,10 +1,9 @@
-Zaleon Systems cleaned website package
+Zaleon Systems final GitHub upload package
 
-This version fixes:
-- Broken header/footer logo paths
-- Uses the approved Zaleon Systems wordmark at the top and bottom
-- Uses a Z graphic derived from the approved logo mark
-- Reduces oversized headings and body text
-- Tightens spacing and card sizing for cleaner formatting
+This package preserves the current approved page wording and layout.
 
-Upload the CONTENTS of this folder to the root of your GitHub repository and replace the matching files.
+Final locked assets:
+- zaleon-systems-logo.png = exact full white Zaleon Systems logo for top-left and footer
+- zaleon-z.png = exact blue glowing Z decorative graphic for the right side
+
+Upload the CONTENTS of this folder to the root of your GitHub repository and replace matching files.
