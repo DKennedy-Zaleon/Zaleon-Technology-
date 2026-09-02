@@ -1,28 +1,63 @@
-# Zaleon Systems website
+# Zaleon Platform Starter
 
-A static HTML/CSS/JS website designed for Cloudflare Pages.
+GitHub-ready starter repository for the Zaleon support experience layer.
 
-## Files
-- `index.html` — Home
-- `services.html` — Services
-- `about.html` — About Us
-- `contact.html` — Contact Us
-- `styles.css` — site-wide styling
-- `script.js` — mobile navigation
-- `assets/zaleon-systems-logo.png` — logo used in the header/hero
+## What is included
 
-## Cloudflare Pages deployment
-1. Create a GitHub repository and upload these files, or use Cloudflare Pages Direct Upload.
-2. In Cloudflare: Workers & Pages → Create → Pages.
-3. For a plain static site, no framework is required.
-4. If Cloudflare asks for a build command, leave it blank. Use the repository root as the output directory when using a direct static deployment workflow.
-5. Add your custom domain in Pages → Custom domains.
+- Next.js client portal
+- Dark Zaleon-branded UI
+- Dashboard
+- Ticket queue / My Tickets
+- Ticket detail with continuous conversation history
+- New ticket form
+- Profile
+- Settings
+- ASP.NET Core API stub
+- Jira connector abstraction
+- PostgreSQL-ready infrastructure placeholder
+- Product specification under `docs/`
 
-## Contact form
-`contact.html` currently points to Formspree with the placeholder `YOUR_FORM_ID`. Replace that value with a real Formspree form ID, or swap the form action for a Cloudflare Pages Function/Worker endpoint.
+## Architecture
 
-## Before launch
-- Confirm the public contact email you want displayed.
-- Add a real phone number only if you want one public.
-- Replace LinkedIn/GitHub footer text with actual links.
-- Add privacy policy / terms if appropriate.
+```text
+Next.js Portal
+      |
+      v
+ASP.NET Core API
+      |
+      +--> Ticketing Connector (Jira first)
+      +--> Identity Connector (Entra later)
+      +--> Notification Service
+      +--> AI / Knowledge Engine
+      +--> PostgreSQL
+```
+
+## Run the frontend
+
+```bash
+cd apps/portal
+npm install
+npm run dev
+```
+
+Open http://localhost:3000
+
+## Run the API
+
+Requires .NET 8 SDK.
+
+```bash
+cd services/api
+dotnet restore
+dotnet run
+```
+
+The API defaults to http://localhost:5080.
+
+## Important
+
+This is an MVP starter scaffold, not a production-ready deployment. Authentication,
+real Jira credentials, Entra SSO, database persistence, notifications, and AI services
+are intentionally stubbed so they can be implemented safely without committing secrets.
+
+Never commit `.env.local`, production secrets, Jira API tokens, or Microsoft client secrets.
